@@ -30,9 +30,9 @@ window.addEventListener('scroll', () => {
     // 현재 스크롤바 위치
 	let scrollLocation = document.documentElement.scrollTop;
 
-    if(scrollLocation >= page1Height && printed_page !== 1){ menu_btn_change_active(1); }
-    if(scrollLocation >= page2Height && printed_page !== 2){ menu_btn_change_active(2); }
-    if(scrollLocation >= page3Height && printed_page !== 3){ menu_btn_change_active(3); }
+    if(scrollLocation >= page1Height && scrollLocation < page2Height && printed_page !== 1){ menu_btn_change_active(1); }
+    if(scrollLocation >= page2Height && scrollLocation < page3Height && printed_page !== 2){ menu_btn_change_active(2); }
+    if(scrollLocation >= page3Height && scrollLocation < page6Height && printed_page !== 3){ menu_btn_change_active(3); }
     if(scrollLocation >= page6Height && printed_page !== 4){ menu_btn_change_active(4); }
 
     // 스크롤바 위치에 따라 menu_btn class 변경
