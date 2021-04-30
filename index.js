@@ -1,10 +1,13 @@
 'use strict';
 
-console.log(window.navigator.userAgent);
+
 
 //인터넷 익스플로러 체크
-if (window.navigator.userAgent.match(/MSIE|Internet Explorer|Trident/i)) {
-    window.location = "microsoft-edge:" + window.location.href;
+if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {
+    window.location = 'microsoft-edge:' + window.location;
+    setTimeout(function() {
+        window.location = 'https://go.microsoft.com/fwlink/?linkid=2135547';
+    }, 1);
 }
 
 //시작
