@@ -1,8 +1,8 @@
 'use strict';
 
-
-
 //인터넷 익스플로러 체크
+const ie = /MSIE \d|Trident.*rv:/.test(navigator.userAgent); 
+console.log(ie);
 if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {
     window.location = 'microsoft-edge:' + window.location;
     setTimeout(function() {
@@ -23,7 +23,7 @@ let printed_menu = 1; //now printed menu
 
 //스크롤 할 때
 menu_btn_change_active(1);
-window.addEventListener('scroll', () => {
+window.addEventListener('scroll', function(){
 
     //메뉴 active 여부 체크
 	let scrollLocation = document.documentElement.scrollTop;
