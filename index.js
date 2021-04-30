@@ -1,5 +1,6 @@
 'use strict';
-console.log(window.location.href);
+
+console.log(window.navigator.userAgent);
 
 //인터넷 익스플로러 체크
 if (window.navigator.userAgent.match(/MSIE|Internet Explorer|Trident/i)) {
