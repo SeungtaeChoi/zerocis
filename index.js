@@ -3,6 +3,7 @@
 //인터넷 익스플로러 체크
 if (window.navigator.userAgent.match(/MSIE|Internet Explorer|Trident/i)) {
     window.location = "microsoft-edge:" + window.location.href;
+    console.log(1);
 }
 
 //시작
