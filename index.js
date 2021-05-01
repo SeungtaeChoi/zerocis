@@ -1,15 +1,5 @@
 'use strict';
 
-//인터넷 익스플로러 체크
-const ie = /MSIE \d|Trident.*rv:/.test(navigator.userAgent); 
-console.log(ie);
-if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {
-    window.location = 'microsoft-edge:' + window.location;
-    setTimeout(function() {
-        window.location = 'https://go.microsoft.com/fwlink/?linkid=2135547';
-    }, 1);
-}
-
 //시작
 const pageHeight = document.documentElement.clientHeight;
 const page1Height = pageHeight * 0; //page1 scrollTop value
@@ -18,7 +8,9 @@ const page3Height = pageHeight * 2; //page3 scrollTop value
 const page4Height = pageHeight * 3; //page4 scrollTop value
 const page5Height = pageHeight * 4; //page5 scrollTop value
 const page6Height = pageHeight * 5; //page6 scrollTop value
-const menu_btn_array = document.getElementsByClassName('menu_btn'); //nav menu botton list
+const menuBtns = ['#menu1','#menu2','#menu3','#menu4'];
+//const menu_btn_array = document.querySelector('.menu_btn'); //nav menu botton list
+//console.log(menu_btn_array);
 let printed_menu = 1; //now printed menu
 
 //스크롤 할 때
@@ -38,7 +30,7 @@ window.addEventListener('scroll', function(){
 
 //scroll에 따라 nav menu 버튼 활성화
 function menu_btn_change_active(num){
-    for (const menu_btn of menu_btn_array) { menu_btn.classList.remove('active'); } //active 모두 삭제
-    menu_btn_array[num-1].classList.add('active'); //active 추가
+    menuBtns.map(function(id){ document.querySelector(id).classList.remove('active'); }); //active 모두 삭제
+    document.querySelector(`#menu${num}`).classList.add('active'); //active 추가
     printed_menu = num; //현재 활성화 값 저장
 }
