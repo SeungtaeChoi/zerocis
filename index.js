@@ -31,6 +31,6 @@ window.addEventListener('scroll', function(){
 //scroll에 따라 nav menu 버튼 활성화
 function menu_btn_change_active(num){
     menuBtns.map(function(id){ document.querySelector(id).classList.remove('active'); }); //active 모두 삭제
-    document.querySelector(`#menu${num}`).classList.add('active'); //active 추가
+    document.querySelector(menuBtns[num-1]).classList.add('active'); //active 추가
     printed_menu = num; //현재 활성화 값 저장
 }
