@@ -69,13 +69,10 @@ a {
         background:#ddd;
     }
     #page5 {
-        background:#eee;
-    }
-    #page6 {
         background:#ddd;
         display: flex; flex-direction:column;
     }
-    #page6 iframe {
+    #page5 iframe {
         flex-grow: 1;
     }
     footer {
