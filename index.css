@@ -73,7 +73,15 @@
     }
 
 /* content */
+    #content { position:relative; width:100vw; height:100vh; }
+    #content > section { width:100vw; height:100%; position:absolute; top:0; z-index:1; transition:all 1s; }
+    #content > section.now { z-index:3; }
+    #content > section.next { z-index:2; }
+    #content > section.up { top:100%; }
+    #content > section.down { top:-50%; }
+
     .page {
+        width:100%;
         height:100vh;
         overflow: hidden;
         position: relative;
@@ -86,20 +94,38 @@
         background-repeat: no-repeat;
         background-size: cover;
     }
-
     .page .desc {
         color:#fff;
+        position: absolute;
+        opacity:0;
+        top:50%; left:50%;
+        transform: translate(-50%, -50%);
+    }
+    .page .desc.e {
+        opacity:1;
+    }
+    #page1 .bg { transition: all 1s; }
+    #page1 .bg.s {
+        transform: scale(2);
+    }
+    #page1 .bg.e {
+        transform: scale(1);
+    }
+    #page1 .logo_wrap {
         position: absolute;
         top:50%; left:50%;
         transform: translate(-50%, -50%);
     }
-
-    #page5 {
-        display: flex; flex-direction:column;
+    #page1 .logo_wrap { transition: all 1s; }
+    #page1 .logo_wrap.s {
+        width:40rem;
+        opacity:1;
     }
-    #page5 iframe {
-        flex-grow: 1;
+    #page1 .logo_wrap.e {
+        width:40rem;
+        opacity:0;
     }
+    #page1 .logo_wrap > img { width:100%; }
     .hu_txt {
         display:none;
     }
@@ -109,7 +135,7 @@
     }
     #page1 .tw-title::after {
         content: "|";
-        color:#000;
+        color:#fff;
         transition: all 0.1s;
         animation: blink 0.5s linear infinite alternate;
     }
@@ -120,8 +146,14 @@
 
 
 /* footer */
+    #page5 .page {
+        display: flex; flex-direction:column;
+    }
+    #page5 .page iframe {
+        flex-grow: 1;
+    }
     footer {
-        padding:3em;
+        padding:2em;
         background:#313131;
         font-size:1.25rem; color:#fff; line-height: 2rem;
         display: flex; justify-content: space-evenly;

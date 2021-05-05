@@ -6,6 +6,8 @@
     box-sizing: border-box;
 }
 
+html, body { width:100vw; height:100vh; }
+
 body { 
     margin:0;
     font-size:16px;

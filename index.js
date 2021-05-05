@@ -21,14 +21,38 @@
         }
     }
 
+/* Page1 */
 
-/* 글씨 이벤트 */
-    //로드 시 첫 페이지 글 써지는 효과
+    //배경 축소
+    const bg_reduce_delay = 1000;
+    const cursor_txt_delay = 1500;
+    const cursor_txt_speed = 180;
+    const page1_bg = document.querySelector('#page1 .bg');
+    setTimeout(function(){
+        page1_bg.classList.remove('s');
+        page1_bg.classList.add('e');
+    }, bg_reduce_delay);
+
+    //로고 보임 + 사라짐
+    const page1_logo = document.querySelector('#page1 .logo_wrap');
+    setTimeout(function(){
+        page1_logo.classList.remove('e');
+        page1_logo.classList.add('s');
+    }, 0);
+    setTimeout(function(){
+        page1_logo.classList.remove('s');
+        page1_logo.classList.add('e');
+    }, bg_reduce_delay);
+
+    //글 써지는 효과
     setTimeout(function(){
         const br = document.createElement("br");
-
+        const page1_desc = document.querySelector('#page1 .desc');
         const hu_txt = document.querySelectorAll('#page1 .hu_txt > li');
         const tw_title = document.querySelector('.tw-title');
+
+        page1_desc.classList.remove('s');
+        page1_desc.classList.add('e');
 
         let tw_title_txt = new Array();
         for(let i=0; i<hu_txt.length; i++){
@@ -50,8 +74,65 @@
             }
             tw_title.append(tw_title_txt[liIndex][typingIdx]);
             typingIdx++;
-        },250);
-    }, 2000);
+        }, cursor_txt_speed);
+    }, cursor_txt_delay);
+
+    const page1 = document.querySelector('#page1');
+    const page2 = document.querySelector('#page2');
+    const page3 = document.querySelector('#page3');
+    const page4 = document.querySelector('#page4');
+    const page5 = document.querySelector('#page5');
+    const pageArr = new Array(page1, page2, page3, page4, page5);
+
+    //스크롤 시 본문
+    let operating = false;
+    let nowPageNum = 0;
+    window.addEventListener('wheel', function(event){
+        const nowPage = pageArr[nowPageNum];
+        let dir;
+        let nextPage;
+        
+        if(!operating){
+            if(event.deltaY < 0){
+                dir = 'up';
+                nextPage = pageArr[nowPageNum-1];
+                if(nextPage === undefined) { return; }
+                nowPageNum--;
+            } else {
+                dir = 'down';
+                nextPage = pageArr[nowPageNum+1];
+                if(nextPage === undefined) { return; }
+                nowPageNum++;
+            }
+            operating = true;
+            scrollTo(nowPage, nextPage, dir);
+        }
+    });
+
+    function scrollTo(nowPage, nextPage, dir) {
+        nextPage.classList.add('next');
+
+        setTimeout(function(){ //z-index 변경되고 실행
+            if(dir === 'up'){
+                nowPage.classList.add('up');
+            } else if(dir === 'down') {
+                nowPage.classList.add('down');
+            }
+
+            nextPage.classList.add('now');
+            nextPage.classList.remove('next');
+        }, 300);
+        
+        setTimeout(function(){
+            if(nowPage.classList.contains('up')){ nowPage.classList.remove('up'); }
+            if(nowPage.classList.contains('down')){ nowPage.classList.remove('down'); }
+            if(nowPage.classList.contains('now')){ nowPage.classList.remove('now'); }
+            
+        },1000);
+
+        setTimeout(function(){ operating = false; },2000);
+        
+    }
 
 
 /* 스크롤 페이지 이동 */
@@ -62,7 +143,7 @@
     const page4Height = pageHeight * 3; //page4 scrollTop value
     const page5Height = pageHeight * 4; //page5 scrollTop value
     let printed_menu = 1; //now printed menu
-    
+
     // //스크롤 시 글씨 나타나는 효과
     // const saTriggerMargin = 300;
     // const saElementList = document.querySelectorAll('.sa');
