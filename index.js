@@ -22,13 +22,49 @@
     }
 
 
-/* 글씨 이벤트 */
-    //로드 시 첫 페이지 글 써지는 효과
+/* 스크롤 이벤트 */
+     //페이지별 scrolltop 값 저장
+    let nowPage = 0;
+    const saElementList = document.querySelectorAll('.page');
+    const pageTopArr = new Array();
+    for (const element of saElementList) {
+        pageTopArr.push(element.getBoundingClientRect().top);
+    }
+    //스크롤
+    let lastScrollTop = 0;
+    window.addEventListener('scroll', function(e){
+        if(pageTopArr.includes(lastScrollTop)){
+            if (window.scrollY > lastScrollTop){
+                nowPage++;
+                const nextPage = pageTopArr[nowPage];
+                window.scrollTo(0, nextPage, 'smooth');
+            } else {
+                nowPage--;
+                const nextPage = pageTopArr[nowPage];
+                window.scrollTo(0, nextPage, 'smooth');
+            }
+        }
+        lastScrollTop = window.scrollY;
+    });
+
+/* page1 */
+    //로고
+    const page1_logo = document.querySelector("#page1 .logo_wrap");
+    setTimeout(function(){
+        page1_logo.classList.remove('s');
+    },1000);
+    //배경이미지
+    const page1_bg = document.querySelector("#page1 .bg");
+    setTimeout(function(){
+        page1_bg.classList.remove('s');
+    },1500);
+    //글씨
     setTimeout(function(){
         const br = document.createElement("br");
 
         const hu_txt = document.querySelectorAll('#page1 .hu_txt > li');
         const tw_title = document.querySelector('.tw-title');
+        tw_title.classList.remove('s');
 
         let tw_title_txt = new Array();
         for(let i=0; i<hu_txt.length; i++){
@@ -50,22 +86,16 @@
             }
             tw_title.append(tw_title_txt[liIndex][typingIdx]);
             typingIdx++;
-        },250);
+        },180);
     }, 2000);
-
+/* page2 */
 
 /* 스크롤 페이지 이동 */
-    const pageHeight = document.documentElement.clientHeight;
-    const page1Height = pageHeight * 0; //page1 scrollTop value
-    const page2Height = pageHeight * 1; //page2 scrollTop value
-    const page3Height = pageHeight * 2; //page3 scrollTop value
-    const page4Height = pageHeight * 3; //page4 scrollTop value
-    const page5Height = pageHeight * 4; //page5 scrollTop value
-    let printed_menu = 1; //now printed menu
+    
     
     // //스크롤 시 글씨 나타나는 효과
     // const saTriggerMargin = 300;
-    // const saElementList = document.querySelectorAll('.sa');
+    // const saElementList = document.querySelectorAll('.page');
 
     // const saFunc = function() {
     //     for (const element of saElementList) {
@@ -77,7 +107,6 @@
     //     }
     // }
 
-    // window.addEventListener('load', saFunc);
     // window.addEventListener('scroll', saFunc);
 
 

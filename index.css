@@ -73,6 +73,7 @@
     }
 
 /* content */
+    #content { scroll-behavior: smooth; }
     .page {
         height:100vh;
         overflow: hidden;
@@ -85,15 +86,37 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        transition: transform 1.2s;
+        
     }
-
     .page .desc {
         color:#fff;
         position: absolute;
         top:50%; left:50%;
         transform: translate(-50%, -50%);
+        opacity: 1;
     }
 
+    #page1 .bg { transform: scale(1); }
+    #page1 .bg.s { transform: scale(2); }
+
+    #page1 .logo_wrap {
+        position:absolute;
+        width:30rem;
+        top:50%; left:50%;
+        transform: translate(-50%, -50%);
+        transition: all 1s;
+        opacity: 0;
+    }
+    #page1 .logo_wrap.s {
+        opacity: 1;
+    }
+    #page1 .logo_wrap img { width:100%; }
+    #page1 .tw-title.s {
+        opacity: 0;
+    }
+    #page2 .bg { transform: scale(2); }
+    #page2 .bg.s { transform: scale(1); }
     #page5 {
         display: flex; flex-direction:column;
     }
@@ -109,7 +132,7 @@
     }
     #page1 .tw-title::after {
         content: "|";
-        color:#000;
+        color:#fff;
         transition: all 0.1s;
         animation: blink 0.5s linear infinite alternate;
     }
