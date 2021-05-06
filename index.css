@@ -96,7 +96,7 @@
         transform: translate(-50%, -50%);
         opacity: 1;
     }
-
+    
     #page1 .bg { transform: scale(1); }
     #page1 .bg.s { transform: scale(2); }
 
@@ -117,12 +117,6 @@
     }
     #page2 .bg { transform: scale(2); }
     #page2 .bg.s { transform: scale(1); }
-    #page5 {
-        display: flex; flex-direction:column;
-    }
-    #page5 iframe {
-        flex-grow: 1;
-    }
     .hu_txt {
         display:none;
     }
@@ -140,7 +134,12 @@
         0%{ opacity:0 }
         100%{ opacity:1 }
     }
-
+    #page5 {
+        display: flex; flex-direction:column;
+    }
+    #page5 iframe {
+        flex-grow: 1;
+    }
 
 /* footer */
     footer {
