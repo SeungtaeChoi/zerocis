@@ -25,71 +25,84 @@
     <script defer src="./index.js"></script>
 </head>
 <body>
-    <header id="header">
-        <div id="logo_wrap">
-            <img id="logo" src="./asset/images/logo.png" alt="logo" />
-        </div>
-        <nav id="nav">
-            <ul>
-                <li>
-                    <a><i class="fas fa-globe"></i></a>
-                    <ul>
-                        <li>
-                            <a>한국어</a>
-                            <div class="underline"></div>
-                        </li>
-                        <li>
-                            <a>ENGLISH</a>
-                            <div class="underline"></div>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <content id="content">
-        <section id="page1" class="page">
-            <div class="bg s" style="background-image:url('./asset/images/bg/1.png');"></div>
-            <div class="logo_wrap s">
-                <img src="./asset/images/logo.png" alt="logo">
+    <div id="noBounce">
+        <header id="header">
+            <div id="logo_wrap">
+                <img id="logo" src="./asset/images/logo.png" alt="logo" />
             </div>
-            <div class="desc">
-                <ul class="hu_txt">
-                    <li>지구의 미래를 위한</li>
-                    <li>친환경 에너지 개발</li>
+            <nav id="nav">
+                <ul>
+                    <li>
+                        <a><i class="fas fa-globe"></i></a>
+                        <ul>
+                            <li>
+                                <a>한국어</a>
+                                <div class="underline"></div>
+                            </li>
+                            <li>
+                                <a>ENGLISH</a>
+                                <div class="underline"></div>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
-                <p class="tw-title s"></p>
-            </div>
-        </section>
-        <section id="page2" class="page">
-            <div class="bg s" style="background-image:url('./asset/images/bg/2.jpeg');"></div>
-            <div class="desc sa sa-scaleUp">
-                ㅁㄴㅇ
-            </div>
-        </section>
-        <section id="page3" class="page">
-            <div class="bg" style="background-image:url('./asset/images/bg/3.jpeg');"></div>
-            <div class="desc sa">
-                ㅁㄴㅇ
-            </div>
-        </section>
-        <section id="page4" class="page">
-            <div class="bg" style="background-image:url('./asset/images/bg/4.jpeg');"></div>
-            <div class="desc sa">
-                ㅁㄴㅇ
-            </div>
-        </section>
-        <section id="page5" class="page">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6356.48435178219!2d127.08933083488765!3d37.1944769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b45302a09c101%3A0x7ed0edfbeaed089b!2z6rOo65Og7JWE7J207YOA7JuM!5e0!3m2!1sko!2skr!4v1619792302694!5m2!1sko!2skr" width="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            <footer>
-                <img src="./asset/images/logo.png" alt="logo" style='height:42px;'/>
-                &nbsp;&nbsp;
-                <div>
-                    본사 : 경기도 화성시 동탄기흥로 570-6 골든아이타워 526호 <span>T.031-831-3841</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>F.031-831-3842</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>E-mail. zerocis@zerocis.com</span><br>
-                    Copyrightⓒ ZEROCIS INC. All Rights Reserved.
+            </nav>
+        </header>
+        <content id="content">
+            <section id="page1">
+                <div class="page">
+                    <div class="bg s" style="background-image:url('./asset/images/bg/1.png');"></div>
+                    <div class="logo_wrap s">
+                        <img src="./asset/images/logo.png" alt="logo">
+                    </div>
+                    <div class="desc">
+                        <ul class="hu_txt">
+                            <li>지구의 미래를 위한</li>
+                            <li>친환경 에너지 개발</li>
+                        </ul>
+                        <p class="tw-title s"></p>
+                    </div>
                 </div>
-            </footer>
-        </section>
-    </content>
+            </section>
+            <section id="page2">
+                <div class="page">
+                    <div class="bg s" style="background-image:url('./asset/images/bg/2.jpeg');"></div>
+                    <div class="desc sa sa-scaleUp">
+                        ㅁㄴㅇ
+                    </div>
+                </div>
+            </section>
+            <section id="page3">
+                <div class="page">
+                    <div class="bg" style="background-image:url('./asset/images/bg/3.jpeg');"></div>
+                    <div class="desc sa">
+                        ㅁㄴㅇ
+                    </div>
+                </div>
+            </section>
+            <section id="page4">
+                <div class="page">
+                    <div class="bg" style="background-image:url('./asset/images/bg/4.jpeg');"></div>
+                    <div class="desc sa">
+                        ㅁㄴㅇ
+                    </div>
+                </div>
+            </section>
+            <section id="page5">
+                <div class="page">
+                    <div class="map_mask"></div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6356.48435178219!2d127.08933083488765!3d37.1944769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b45302a09c101%3A0x7ed0edfbeaed089b!2z6rOo65Og7JWE7J207YOA7JuM!5e0!3m2!1sko!2skr!4v1619792302694!5m2!1sko!2skr" width="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <footer>
+                        <img src="./asset/images/logo.png" alt="logo" style='height:42px;'/>
+                        &nbsp;&nbsp;
+                        <div>
+                            본사 : 경기도 화성시 동탄기흥로 570-6 골든아이타워 526호 <span>T.031-831-3841</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>F.031-831-3842</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>E-mail. zerocis@zerocis.com</span><br>
+                            Copyrightⓒ ZEROCIS INC. All Rights Reserved.
+                        </div>
+                    </footer>
+                </div>
+            </section>
+        </content>
+    </div>
 </body>
 </html>

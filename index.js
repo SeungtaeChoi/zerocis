@@ -1,5 +1,6 @@
 'use strict';
 
+
 /* 메뉴 호버 시 드롭다운 */
     const menu_title = document.querySelectorAll('#nav > ul > li > a');
     for(let i=0; i<menu_title.length; i++ ){
@@ -22,30 +23,95 @@
     }
 
 
+
 /* 스크롤 이벤트 */
-     //페이지별 scrolltop 값 저장
-    let nowPage = 0;
+    history.scrollRestoration = "manual"; //리로드시 최상단
+
+    //페이지별 scrolltop 값 저장
+    let nowPage = 'p1';
+    const vhPage = window.innerHeight; //창 높이
     const saElementList = document.querySelectorAll('.page');
-    const pageTopArr = new Array();
+    let pageTopArr = new Array();
     for (const element of saElementList) {
         pageTopArr.push(element.getBoundingClientRect().top);
     }
-    //스크롤
-    let lastScrollTop = 0;
-    window.addEventListener('scroll', function(e){
-        if(pageTopArr.includes(lastScrollTop)){
-            if (window.scrollY > lastScrollTop){
-                nowPage++;
-                const nextPage = pageTopArr[nowPage];
-                window.scrollTo(0, nextPage, 'smooth');
-            } else {
-                nowPage--;
-                const nextPage = pageTopArr[nowPage];
-                window.scrollTo(0, nextPage, 'smooth');
-            }
+    const pageInfo = {
+        p1:{
+            pre:null,
+            top:pageTopArr[0],
+            next:'p2'
+        },
+        p2:{
+            pre:'p1',
+            top:pageTopArr[1],
+            next:'p3'
+        },
+        p3:{
+            pre:'p2',
+            top:pageTopArr[2],
+            next:'p4'
+        },
+        p4:{
+            pre:'p3',
+            top:pageTopArr[3],
+            next:'p5'
+        },
+        p5:{
+            pre:'p4',
+            top:pageTopArr[4],
+            next:null
         }
-        lastScrollTop = window.scrollY;
-    });
+    }
+    //스크롤
+    let initScrollY = null;
+    let operating = false;
+    const saveScrollStart = (e) => { //모바일 위,아래 체크를 위해 저장
+        initScrollY = e.touches[0].screenY;
+    }
+    const setScrollEvent = (e) => {
+        console.log(1);
+        
+        if(!operating){
+            operating = true;
+                        
+            //up, down 체크
+            let dir;
+            if(e.changedTouches){ //모바일
+                if(e.changedTouches[0].screenY < initScrollY){
+                    dir = 'down';
+                } 
+                if(e.changedTouches[0].screenY > initScrollY){
+                    dir = 'up';
+                }
+            } else { //pc
+                if(e.deltaY>0){ dir = 'down'; }
+                if(e.deltaY<0){ dir = 'up'; }
+            }
+
+            //실행
+            const content = document.querySelector('#content');
+            if(dir === 'down'){
+                if(pageInfo[nowPage].next !== null) {
+                    content.classList.add(`move_${pageInfo[nowPage].next}`);
+                    content.classList.remove(`move_${nowPage}`);
+                    nowPage = pageInfo[nowPage].next;
+                }
+            }
+            if(dir === 'up'){
+                if(pageInfo[nowPage].pre !== null) {
+                    content.classList.add(`move_${pageInfo[nowPage].pre}`);
+                    content.classList.remove(`move_${nowPage}`);
+                    nowPage = pageInfo[nowPage].pre;
+                }
+            }
+            console.log(2);
+
+            setTimeout(function(){ operating = false; }, 1300);
+        }
+    }
+    window.addEventListener('wheel', setScrollEvent); //pc
+    window.addEventListener('touchstart', saveScrollStart);
+    window.addEventListener('touchend', setScrollEvent);
 
 /* page1 */
     //로고
