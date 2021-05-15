@@ -24,6 +24,18 @@ ul {
     color:#fff;
 }
 
+.w-100 { width:100%; }
+.h-100 { height:100%; }
+.absolute { position:absolute; }
+.relative { position:relative; }
+.top-0 { top:0; }
+.left-0 {left:0; }
+
+.center-x {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 
 /* Scroll Animation (sa, 스크롤 애니메이션) */
 .sa {

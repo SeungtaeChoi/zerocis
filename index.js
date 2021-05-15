@@ -97,7 +97,7 @@ const br = document.createElement("br");
 
 /* page1 */
     //로고
-    const page1_logo = document.querySelector("#page1 .logo_wrap");
+    const page1_logo = document.querySelector("#page1 .logo_mask");
     setTimeout(function(){
         page1_logo.classList.remove('s');
     },1000);
@@ -136,13 +136,12 @@ const br = document.createElement("br");
     }, 2000);
 
 
-/* page2 */
+/* page2~ */
     const pageAniStart = (page) => {
         //배경이미지
         const page_bg = document.querySelector(`#${page} .bg`);
         if(page_bg === null) { return false; }
         setTimeout(function(){
-            console.log(page);
             if(page_bg.classList.contains('s')){ page_bg.classList.remove('s'); }
         },);
         //글씨
@@ -154,4 +153,11 @@ const br = document.createElement("br");
             const body = document.querySelector(`#${page} .desc2 > .body`);
             if(body.classList.contains('s')){ body.classList.remove('s'); }
         }, 2000);
+
+        if(document.querySelector(`#${page} .desc2 > .body > .next`)){
+            setTimeout(function(){
+                const body = document.querySelector(`#${page} .desc2 > .body > .next`);
+                if(body.classList.contains('s')){ body.classList.remove('s'); }
+            }, 3000);
+        }
     }
