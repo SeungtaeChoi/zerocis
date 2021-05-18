@@ -113,10 +113,12 @@ const br = document.createElement("br");
     //로고
     const page1_logo = document.querySelector("#main .logo_mask");
     //배경이미지
-    const page1_bg = document.querySelector("#main .bg");
-    setTimeout(function(){
-        page1_bg.classList.remove('s');
-    },1500);
+    const page1_bg = document.querySelector("#main .bg.s");
+    if(page1_bg){
+        setTimeout(function(){
+            page1_bg.classList.remove('s');
+        },1500);
+    }
     //글씨
     setTimeout(function(){
         const hu_txt = document.querySelectorAll('#page1 .hu_txt > li');
@@ -148,7 +150,14 @@ const br = document.createElement("br");
 
 
 /* #page2~ */
+    const header = document.querySelector('#header');
     const pageAniStart = (page) => {
+        if(page === 'page1'){
+            header.classList.remove("hide");
+        } else {
+            header.classList.add("hide");
+        }
+
         //배경이미지
         const page_bg = document.querySelector(`#${page} .bg`);
         if(page_bg === null) { return false; }

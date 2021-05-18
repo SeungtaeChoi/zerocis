@@ -23,10 +23,12 @@
 /* header */
     #noBounce { position:fixed; width:100%; height:100%; }
     #header { 
-        width:100%; height:60px; padding:0 3rem; background-color:#2b2b2be3;
+        transition:all 0.5s;
+        opacity:1; width:100%; height:60px; padding:0 3rem; background-color:#2b2b2be3;
         position:absolute; top:0; left:0; z-index:100;
         display:flex; justify-content:space-between;  align-items:center;
     }
+    #header.hide { opacity:0; }
     #logo_wrap, #logo { height:100%; }
     #nav { height:100%; position: relative; }
     #nav > ul { 
@@ -122,7 +124,7 @@
     #map_view_btn { opacity:0; background:#313131; border: none; border-radius: 5px; padding: 0.5em 1em; box-shadow: 0px 7px 17px 0px #7b7b7b; transition: all 0.5s; }
     #google_map_footer .map_mask:hover #map_view_btn { opacity:1; }
     #google_map_footer.page iframe { flex-grow: 1; }
-    footer { z-index:2; padding:3em; background:#232323; font-size:1.1rem; line-height: 2rem; display: flex; justify-content: space-evenly; }
+    footer { z-index:2; padding:3em; background:#232323; font-size:1rem; line-height: 2rem; display: flex; justify-content: space-evenly; }
     footer span { white-space: nowrap; }
 
     /* PC */
@@ -178,7 +180,7 @@
     /* MOBILE */
     @media only screen 
     and (max-width : 480px) {
-        .page .title { padding:0 1em; }
+        .page .title { padding:0 0.3em; }
         .page .desc { font-weight:bold; }
         .page .desc .title_a { text-align:center; }
         .page .desc .desc_a { text-align:center; padding:0 3rem; }
@@ -187,12 +189,12 @@
         #page3 .bg { background-image:url('./asset/images/bg/3_m.jpeg'); }
         #page6 .bg { background-image:url('./asset/images/bg/6_m.jpeg'); }
 
-        #img4_1 { width:40%; transform: translateX(12%) translateY(12%); }
-        #img4_2 { width:90%; transform: translateX(-50%) translateY(-70%); }
-        #img5_1 { width:85%; transform: translateX(-50%) translateY(-37%);
+        #img4_1 { width:32%; transform: translateX(12%) translateY(21%); }
+        #img4_2 { width:77%; transform: translateX(-50%) translateY(-62%); }
+        #img5_1 { width:85%; transform: translateX(-50%) translateY(-26%);
             content:url('./asset/images/bg/5_1_m.png');
         }
-        #img5_2 { width:93%; transform: translateX(-50%) translateY(-38%);
+        #img5_2 { width:93%; transform: translateX(-50%) translateY(-28%);
             content:url('./asset/images/bg/5_2_m.png');
         }
         
