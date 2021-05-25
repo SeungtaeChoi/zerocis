@@ -32,19 +32,39 @@ const br = document.createElement("br");
         content_mask.classList.remove('s');
         setTimeout(()=>{
             content_mask.style['z-index'] = 'unset';
-            page1act();
         },1000);
     },500);
 
-    //section 배치
+    //section 배치, navbar셋팅
     const sections = content.querySelectorAll('section');
+    const navbar = document.querySelector("#navbar");
     for(let i=0; i<sections.length; i++){
         sections[i].style.top = `${100*i}vh`;
-    }
-
-    //page1
-    const page1act = () => {
-
+        if(i===0){
+            let a = document.createElement('li');
+            a.append('●'); a.classList.add('navdot'); a.classList.add('act');
+            a.classList.add('page1');
+            navbar.appendChild(a);
+            a.addEventListener('click', function(){                
+                content.className = "page1";
+                setTimeout(function(){
+                    operating = false;
+                    pageAniStart("page1");
+                }, 1500);
+            });
+        } else {
+            let a = document.createElement('li');
+            a.append('●'); a.classList.add('navdot');
+            a.classList.add(`page${i+1}`);
+            navbar.appendChild(a);
+            a.addEventListener('click', function(){
+                content.className = `move_page${i+1}`;
+                setTimeout(function(){
+                    operating = false;
+                    pageAniStart(`page${i+1}`);
+                }, 1500);
+            });
+        }
     }
 
     //페이지별 scrolltop 값 저장
@@ -62,6 +82,7 @@ const br = document.createElement("br");
         pageInfo[`page${i+1}`].next = next;
         prePage = `page${i+1}`;
     }
+    
 
     //스크롤
     let initScrollY = null;
@@ -113,7 +134,7 @@ const br = document.createElement("br");
     //로고
     const page1_logo = document.querySelector("#main .logo_mask");
     //배경이미지
-    const page1_bg = document.querySelector("#main .bg.s");
+    const page1_bg = document.querySelector("#page1 .bg.s");
     if(page1_bg){
         setTimeout(function(){
             page1_bg.classList.remove('s');
@@ -157,6 +178,10 @@ const br = document.createElement("br");
         } else {
             header.classList.add("hide");
         }
+        
+        navbar.querySelector(".navdot.act").classList.remove('act');
+        navbar.querySelector(`.navdot.${page}`).classList.add('act');
+        
 
         //배경이미지
         const page_bg = document.querySelector(`#${page} .bg`);
