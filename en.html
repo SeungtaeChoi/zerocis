@@ -9,147 +9,146 @@
     <meta property="og:title" content="(주)제로시스" />
     <meta property="og:description" content="탄소배출을 최소화할 수 있는 친환경 에너지 솔루션을 제공합니다." />
     <meta property="og:url" content="http://www.zerocis.com" />
-    <meta property="og:image" content="http://www.zerocis.com/asset/images/og_image.jpeg" />
 
     <title>(주)제로시스</title>
     <link rel="shortcut icon" href="./asset/images/favicon.ico">
 
+    <script defer src="./asset/plugin/jquery/1.8.3/jquery.min.js"></script>
+    <script defer src="./asset/plugin/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./asset/plugin/fullpage/fullPage.css" />
+    <script defer type="text/javascript" src="./asset/plugin/fullpage/fullPage.js"></script>
     <link rel="stylesheet" type="text/css" href="./asset/plugin/fontawesome-free-5.15.3/css/all.css">
     <script defer src="./asset/plugin/fontawesome-free-5.15.3/js/all.js"></script>
     <link rel="stylesheet" type="text/css" href="./asset/plugin/bootstrap-5.0/css/bootstrap.css">
     <script defer src="./asset/plugin/bootstrap-5.0/js/bootstrap.js"></script>
-    <link rel="stylesheet" type="text/css" href="./index.css?ver=3">
-    <script defer src="./index.js?ver=2"></script>
+    <link rel="stylesheet" type="text/css" href="./index.css?ver=5">
+    <script defer src="./index.js?ver=4"></script>
 </head>
-<body bgproperties="fixed">
-    <div id="noBounce">
-        <header id="header">
-            <div id="logo_wrap">
-                <img id="logo" src="./asset/images/logo.png" alt="logo" />
+<body>
+    <div id="fullpage">
+        <div id="main" class="section">
+            <div id="header">
+                <div id="logo_wrap">
+                    <img id="logo" src="./asset/images/logo.png" alt="logo" />
+                </div>
+                <nav id="nav">
+                    <ul>
+                        <li>
+                            <a><i class="fas fa-globe"></i></a>
+                            <ul>
+                                <li>
+                                    <a href="./">한국어</a>
+                                    <div class="underline"></div>
+                                </li>
+                                <li>
+                                    <a href="./en.html">ENGLISH</a>
+                                    <div class="underline"></div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
             </div>
-            <nav id="nav">
-                <ul>
-                    <li>
-                        <a><i class="fas fa-globe"></i></a>
-                        <ul>
-                            <li>
-                                <a href="./">한국어</a>
-                                <div class="underline"></div>
-                            </li>
-                            <li>
-                                <a href="./en.html">ENGLISH</a>
-                                <div class="underline"></div>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <content id="content_wrap">
-            <div id="content" class="move_page1">                
+            <div class="page">
                 <div id="content_mask" class="s">
                     <img class="logo" src="./asset/images/logo.png" alt="logo">
                 </div>
-                <section id="page1">
-                    <div class="page">
-                        <div class="bg s scale_up" style="background-image:url('./asset/images/bg/1.jpg');"></div>
-                        <div class="desc center">
-                            <ul class="hu_txt"><li>지구의 미래를 위한</li><li>친환경 에너지 개발</li></ul>
-                            <p class="tw-title s" style="white-space:nowrap;"></p>
-                        </div>
-                    </div>
-                </section>
-                <section id="page2">
-                    <div class="page">
-                        <div class="mask" style="opacity:0.1;"></div>
-                        <div class="bg s scale_down"></div>
-                        <div class="desc">
-                            <div class="title_a s1 s">지구온난화를 늦추기 위한<br/>친환경 산업을 주도</div>
-                            <div class="desc_a s2 s">
-                                전세계적으로 탄소배출을 줄이기 위한 다양한 정책을
-                                발표하고 있고, 점차 탄소에너지의 사용은 줄어들게되고
-                                어느 순간 친환경에너지로 대체가 될 것입니다.<br/>
-                                친환경에너지의 종착역인 수소산업은 앞으로 펼쳐질
-                                미래의 핵심산업이 될 것입니다.<br/>
-                                제로시스는 이 전세계적인 산업흐름을 앞당기고
-                                한 발 앞서가는 비즈니스를 하고자 합니다.
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section id="page3">
-                    <div class="page">
-                        <div class="mask" style="opacity:0.2;"></div>
-                        <div class="bg s scale_down"></div>
-                        <div class="desc">
-                            <div class="title_a s1 s">그린 수소 제조</div>
-                            <div class="desc_a s2 s">
-                                제로시스는 천연가스를 분배하여
-                                탄소와 수소를 생성하는 친환경 탄소 / 수소 제조장치를 개발합니다.<br/>
-                                탄소 / 수소제조장치는 태양광발전소, 풍력발전의 ESS로 활영하여
-                                잉여 전기를 이용 수소를 제조할 수 있습니다.
-                            </div>
-                        </div>                        
-                    </div>
-                </section>
-                <section id="page4">
-                    <div class="page">
-                        <div class="mask" style="opacity:0.3;"></div>
-                        <div class="bg s scale_down" style="background-image:url('./asset/images/bg/4.jpeg');"></div>
-                        <div class="title s s1">The role of H2 from natural gas</div>
-                        <div class="desc">
-                            <div class="img_wrap">
-                                <img id="img4_1" class="s s2" src="./asset/images/bg/4_1.png" alt="image"/>
-                                <img id="img4_2" class="s s3" src="./asset/images/bg/4_2.png" alt="image"/>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section id="page5">
-                    <div class="page">
-                        <div class="mask" style="opacity:0.5;"></div>
-                        <div class="bg s scale_down" style="background-image:url('./asset/images/bg/5.jpeg');"></div>
-                        <div class="title s s1">HYDROGEN PRODUCTION PATHWAYS<br><span class="small">(at 100% efficiency)</span></div>
-                        <div class="desc">
-                            <div class="img_wrap">
-                                <img id="img5_1" class="s s2" alt="image"/>
-                                <img id="img5_2" class="s s3" alt="image"/>
-                            </div>
-                        </div>                        
-                    </div>
-                </section>
-                <section id="page6">
-                    <div class="page">
-                        <div class="mask" style="opacity:0.2;"></div>
-                        <div class="bg s scale_down"></div>
-                        <div class="desc">
-                            <div class="title_a s1 s">연료전지 파워팩</div>
-                            <div class="desc_a s2 s">
-                                제로시스는 손쉬게 연료전지 시스템을
-                                적용할 수 있는 연료전지 파워팩을 개발합니다.<br/>
-                                연료전지 파워팩은 드론, 무인선박, 소형 모빌리티에
-                                손쉽게 연료전지시스템을 적용할 수 있게 합니다.
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section id="page7">
-                    <div class="page" id="google_map_footer">
-                        <div class="map_mask">
-                            <a id="map_view_btn" href="https://goo.gl/maps/i8jAVR5mEjN2wctR6" target="_blank">자세히 보기 &#10149;</a>
-                        </div>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25429.345014571933!2d127.07843033751716!3d37.1843572083487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b45302a09c101%3A0x7ed0edfbeaed089b!2z6rOo65Og7JWE7J207YOA7JuM!5e0!3m2!1sko!2skr!4v1620656727656!5m2!1sko!2skr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                        <footer>
-                            <img src="./asset/images/logo.png" alt="logo"/>
-                            <div>
-                                본사 : 경기도 화성시 동탄기흥로 570-6 골든아이타워 526호 <span>T.031-831-3841</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>F.031-831-3842</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>E-mail. zerocis@zerocis.com</span><br>
-                                <span>Copyrightⓒ ZEROCIS INC. All Rights Reserved.</span>
-                            </div>
-                        </footer>
-                    </div>
-                </section>
+                <div class="bg s scale_up" style="background-image:url('./asset/images/bg/1.jpg');"></div>
+                <div class="desc center">
+                    <ul class="hu_txt"><li>지구의 미래를 위한</li><li>친환경 에너지 개발</li></ul>
+                    <p class="tw-title s" style="white-space:nowrap;"></p>
+                </div>
             </div>
-        </content>
+        </div>
+        <div id="page2" class="section">
+            <div class="page">
+                <div class="mask" style="opacity:0.1;"></div>
+                <div class="bg s scale_down"></div>
+                <div class="desc txt">
+                    <div class="title_a s1 s">지구온난화를 늦추기 위한<br/>친환경 산업을 주도</div>
+                    <div class="desc_a s2 s">
+                        전세계적으로 탄소배출을 줄이기 위한 다양한 정책을
+                        발표하고 있고, 점차 탄소에너지의 사용은 줄어들게되고
+                        어느 순간 친환경에너지로 대체가 될 것입니다.<br/>
+                        친환경에너지의 종착역인 수소산업은 앞으로 펼쳐질
+                        미래의 핵심산업이 될 것입니다.<br/>
+                        제로시스는 이 전세계적인 산업흐름을 앞당기고
+                        한 발 앞서가는 비즈니스를 하고자 합니다.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="page3" class="section">
+            <div class="page">
+                <div class="mask" style="opacity:0.2;"></div>
+                <div class="bg s scale_down"></div>
+                <div class="desc txt">
+                    <div class="title_a s1 s">그린 수소 제조</div>
+                    <div class="desc_a s2 s">
+                        제로시스는 천연가스를 분배하여
+                        탄소와 수소를 생성하는 친환경 탄소 / 수소 제조장치를 개발합니다.<br/>
+                        탄소 / 수소제조장치는 태양광발전소, 풍력발전의 ESS로 활영하여
+                        잉여 전기를 이용 수소를 제조할 수 있습니다.
+                    </div>
+                </div>                        
+            </div>
+        </div>
+        <div id="page4" class="section">
+            <div class="page">
+                <div class="mask" style="opacity:0.3;"></div>
+                <div class="bg s scale_down" style="background-image:url('./asset/images/bg/4.jpeg');"></div>
+                <div class="title s s1">The role of H2 from natural gas</div>
+                <div class="desc">
+                    <div class="img_wrap">
+                        <img id="img4_1" class="s s2" src="./asset/images/bg/4_1.png" alt="image"/>
+                        <img id="img4_2" class="s s3" src="./asset/images/bg/4_2.png" alt="image"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="page5" class="section">
+            <div class="page">
+                <div class="mask" style="opacity:0.5;"></div>
+                <div class="bg s scale_down" style="background-image:url('./asset/images/bg/5.jpeg');"></div>
+                <div class="title s s1">HYDROGEN PRODUCTION PATHWAYS<br><span class="small">(at 100% efficiency)</span></div>
+                <div class="desc">
+                    <div class="img_wrap">
+                        <img id="img5_1" class="s s2" alt="image"/>
+                        <img id="img5_2" class="s s3" alt="image"/>
+                    </div>
+                </div>                        
+            </div>
+        </div>
+        <div id="page6" class="section">
+            <div class="page">
+                <div class="mask" style="opacity:0.2;"></div>
+                <div class="bg s scale_down"></div>
+                <div class="desc txt">
+                    <div class="title_a s1 s">연료전지 파워팩</div>
+                    <div class="desc_a s2 s">
+                        제로시스는 손쉬게 연료전지 시스템을
+                        적용할 수 있는 연료전지 파워팩을 개발합니다.<br/>
+                        연료전지 파워팩은 드론, 무인선박, 소형 모빌리티에
+                        손쉽게 연료전지시스템을 적용할 수 있게 합니다.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="page7" class="section">
+            <div class="page" id="google_map_footer">
+                <div class="map_mask">
+                    <a id="map_view_btn" href="https://goo.gl/maps/i8jAVR5mEjN2wctR6" target="_blank">자세히 보기 &#10149;</a>
+                </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25429.345014571933!2d127.07843033751716!3d37.1843572083487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b45302a09c101%3A0x7ed0edfbeaed089b!2z6rOo65Og7JWE7J207YOA7JuM!5e0!3m2!1sko!2skr!4v1620656727656!5m2!1sko!2skr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <footer>
+                    <img src="./asset/images/logo_gray.png" alt="logo"/>
+                    <div>
+                        본사 : 경기도 화성시 동탄기흥로 570-6 골든아이타워 526호 <span>T.031-831-3841</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>F.031-831-3842</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>E-mail. zerocis@zerocis.com</span><br>
+                        <span>Copyrightⓒ ZEROCIS INC. All Rights Reserved.</span>
+                    </div>
+                </footer>
+            </div>
+        </div>
     </div>
 </body>
 </html>
