@@ -58,6 +58,7 @@
         #nav > ul > li > a { font-size: 1.5rem; }
     }
 
+    #fp-nav { margin-right:-20px; }
     #fp-nav ul li a span { background: #e42320a1; }
 
     #content_mask.s { opacity: 1; z-index: 100; }
@@ -76,7 +77,7 @@
     .scale_up.bg.s { transform: scale(1); }
     .scale_up.bg { transform: scale(2); transition: all 1.0s ease-in-out; }
     .scale_down.bg.s { transform: scale(2); }
-    .scale_down.bg { transform: scale(1); transition: all 1.0s ease-in-out; }
+    .scale_down.bg { transform: scale(1); transition: all 1.0s ease-in-out;}
 
     .page .mask { position: absolute; width:100%; height:100%; z-index:2; background:#000; }
     .page .title, .page .desc {  width:100%; z-index:3; }
@@ -103,6 +104,7 @@
     #main .tw-title::after { content: "|"; transition: all 0.1s; animation: blink 0.5s linear infinite alternate; }
     @keyframes blink { 0%{ opacity:0 } 100%{ opacity:1 } }
 
+    #page4 .page .title { line-height:3rem; }
     #page5 .page .title { line-height:3rem; padding-top: 1rem; }
     #page5 .page .title span { font-weight:normal; font-size:2.0rem; font-weight: normal; }
 
