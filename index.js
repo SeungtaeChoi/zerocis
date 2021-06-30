@@ -1,7 +1,5 @@
 'use strict';
 
-const br = document.createElement("br");
-
 /* fullpage */
     $(document).ready(function() {
         $('#fullpage').fullpage({
@@ -71,7 +69,7 @@ const br = document.createElement("br");
         let tw_title_txt = new Array();
         for(let i=0; i<hu_txt.length; i++){
             const split_txt = hu_txt[i].innerText.split('');
-            tw_title_txt.push(split_txt);    
+            tw_title_txt.push(split_txt);
         } //글 배열
 
         let typingIdx=0;
@@ -84,6 +82,7 @@ const br = document.createElement("br");
                 if(liLength === liIndex) { //모든 줄 출력되면 중지
                     return clearInterval(typing);
                 }
+                const br = document.createElement("br");
                 tw_title.append(br);
             }
             tw_title.append(tw_title_txt[liIndex][typingIdx]);
