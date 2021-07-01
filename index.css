@@ -130,7 +130,7 @@
         #page3 .bg { background-image:url('./asset/images/bg/3.jpeg'); }
         #page3 .desc { transform: translateX(-70%) translateY(-90%); }
         #page6 .bg { background-image:url('./asset/images/bg/6.jpg'); }
-        #page6 .desc { transform: translateX(-70%) translateY(20%); }
+        #page6 .desc { transform: translateX(-70%) translateY(-25%); }
 
         #img4_1 { width:19%; transform: translateX(-164%) translateY(-38%); }
         #img4_2 { width:39%; transform: translateX(-26%) translateY(-43%); }
