@@ -175,7 +175,8 @@
     and (max-width : 480px) {
         #navbar { right: -1.0rem; }
 
-        .page .title { font-size:2.5rem; padding:0 0.3em; }
+        #main .tw-title { font-size:2.5rem; }
+        .page .title { padding:0 0.3em; }
         .page .desc { font-weight:bold; }
         .page .desc.txt { width: 100%; transform: translateX(-50%) translateY(-50%); }
         .page .desc .title_a { text-align:center; }
