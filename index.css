@@ -89,10 +89,10 @@
     .page .desc .img_wrap img { position:absolute; opacity:1; transition: all 1s; top:50%; left:50%; }
     .page .desc .img_wrap img.s { opacity:0; }
 
-    .page .desc.txt { width:auto; }
+    /* .page .desc.txt { width:auto; } */
     
     .page .desc .title_a.s { opacity: 0; }
-    .page .desc .title_a { opacity: 1; transition: all 1s; font-size:3rem; line-height:4.5rem; margin-bottom:2rem; font-weight:bold; }
+    .page .desc .title_a { text-align:center; padding:2rem; opacity: 1; transition: all 1s; font-size:3rem; line-height:4.5rem; margin-bottom:2rem; font-weight:bold; }
     .page .desc .desc_a.s { opacity: 0; }
     .page .desc .desc_a { opacity: 1; transition: all 1s; font-size:1.3rem; line-height:2.5rem; }
 
@@ -100,13 +100,13 @@
     #main .tw-title.s { font-size:0rem; }
     #main .tw-title { white-space:nowrap;  }
     #main .tw-title,
-    .page .title { font-size:3rem; font-weight:bold; }
+    .page .title { font-size:3rem; font-weight:bold; word-break: keep-all; }
     #main .tw-title::after { content: "|"; transition: all 0.1s; animation: blink 0.5s linear infinite alternate; }
     @keyframes blink { 0%{ opacity:0 } 100%{ opacity:1 } }
 
-    #page4 .page .title { line-height:3rem; }
-    #page5 .page .title { line-height:3rem; padding-top: 1rem; }
-    #page5 .page .title span { font-weight:normal; font-size:2.0rem; font-weight: normal; }
+    #page4 .page .title { line-height:4rem;  word-break: keep-all; }
+    #page5 .page .title { line-height:4rem; padding-top: 0.5rem; word-break: keep-all; }
+    /* #page5 .page .title span { font-weight:normal; font-size: 2rem; font-weight: normal; } */
     
     #google_map_footer.page { display: flex; flex-direction:column; }
     #map_view_btn { opacity:0; background:#313131; border: none; border-radius: 5px; padding: 0.5em 1em; box-shadow: 0px 7px 17px 0px #7b7b7b; transition: all 0.5s; }
@@ -123,14 +123,18 @@
     and (min-width : 769px) {
         #navbar { right: 1.0rem; font-size:0.8rem; }
 
-        .page .desc.txt { transform: translateX(-70%) translateY(-50%); }
+        /* .page .desc.txt { transform: translateX(-70%) translateY(-50%); } */
         .page .desc.txt .desc_a { width:75%; }
 
-        #page2 .bg { background-image:url('./asset/images/bg/2.jpeg'); }
-        #page3 .bg { background-image:url('./asset/images/bg/3.jpeg'); }
-        #page3 .desc { transform: translateX(-70%) translateY(-90%); }
+        #page2 .bg { background-image:url('./asset/images/bg/2.jpg'); }
+        #page3 .bg { background-image:url('./asset/images/bg/3.jpg'); }
+        /* #page3 .desc { transform: translateX(-70%) translateY(-90%); } */
         #page6 .bg { background-image:url('./asset/images/bg/6.jpg'); }
+        #page7 .bg { background-image:url('./asset/images/bg/7.jpg'); }
+        #page8 .bg { background-image:url('./asset/images/bg/8.jpg'); }
         #page6 .desc { transform: translateX(-70%) translateY(-25%); }
+        #page7 .desc { transform: translateX(-70%) translateY(-25%); }
+        #page8 .desc { transform: translateX(-70%) translateY(-25%); }
 
         #img4_1 { width:19%; transform: translateX(-164%) translateY(-38%); }
         #img4_2 { width:39%; transform: translateX(-26%) translateY(-43%); }
@@ -154,9 +158,11 @@
         .page .desc .title_a { text-align:center; }
         .page .desc .desc_a { text-align:center; width:100%; margin:auto; }
 
-        #page2 .bg { background-image:url('./asset/images/bg/2.jpeg'); }
-        #page3 .bg { background-image:url('./asset/images/bg/3.jpeg'); }
+        #page2 .bg { background-image:url('./asset/images/bg/2.jpg'); }
+        #page3 .bg { background-image:url('./asset/images/bg/3.jpg'); }
         #page6 .bg { background-image:url('./asset/images/bg/6.jpg'); }
+        #page7 .bg { background-image:url('./asset/images/bg/7.jpg'); }
+        #page8 .bg { background-image:url('./asset/images/bg/8.jpg'); }
 
         #img4_1 { width:22%; transform: translateX(-164%) translateY(-38%); }
         #img4_2 { width:43%; transform: translateX(-26%) translateY(-43%); }
@@ -176,15 +182,17 @@
         #navbar { right: -1.0rem; }
 
         #main .tw-title { font-size:2.5rem; }
-        .page .title { padding:0 0.3em; }
+        .page .title { padding:0 0.3em; font-size:2.5rem; }
         .page .desc { font-weight:bold; }
         .page .desc.txt { width: 100%; transform: translateX(-50%) translateY(-50%); }
-        .page .desc .title_a { text-align:center; }
+        .page .desc .title_a { text-align:center; font-size: 2.5rem; }
         .page .desc .desc_a { text-align:center; padding:0 3rem; font-size:1.8rem; font-weight: normal; line-height:2.7rem; }
 
-        #page2 .bg { background-image:url('./asset/images/bg/2_m.jpg'); }
-        #page3 .bg { background-image:url('./asset/images/bg/3_m.jpeg'); }
-        #page6 .bg { background-image:url('./asset/images/bg/6_m.jpeg'); }
+        #page2 .bg { background-image:url('./asset/images/bg/2.jpg'); }
+        #page3 .bg { background-image:url('./asset/images/bg/3.jpg'); }
+        #page6 .bg { background-image:url('./asset/images/bg/6.jpg'); }
+        #page7 .bg { background-image:url('./asset/images/bg/7.jpg'); }
+        #page8 .bg { background-image:url('./asset/images/bg/8.jpg'); }
 
         #img4_1 { width:30%; transform: translateX(12%) translateY(21%); }
         #img4_2 { width:75%; transform: translateX(-50%) translateY(-62%); }
