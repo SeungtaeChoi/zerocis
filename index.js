@@ -5,7 +5,7 @@
             navigation:true,
             autoScrolling:true,
             scrollHorizontally: true,
-            scrollingSpeed:1500,
+            touchSensitivity:50,
             afterLoad: function(origin, destination){
                 const section = destination - 1;
 
