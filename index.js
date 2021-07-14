@@ -1,5 +1,3 @@
-'use strict';
-
 /* fullpage */
     $(document).ready(function() {
         $('#fullpage').fullpage({
