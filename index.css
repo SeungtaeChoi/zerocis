@@ -212,6 +212,7 @@
         #page2 .page .desc.txt { width: 100%; transform: translateX(-50%) translateY(-50%); }
         .page .desc .title_a { text-align:center; font-size: 2.5rem; }
         .page .desc .desc_a { text-align:center; padding:0 3rem; font-size:1.8rem; font-weight: normal; line-height:2.7rem; }
+        #page5 .page .title { padding-top:5rem; }
 
         #page2 .bg { background-image:url('./asset/images/bg/2_m.jpeg'); }
         #page3 .bg { background-image:url('./asset/images/bg/3_m.jpeg'); }
@@ -221,16 +222,16 @@
 
         #img4_1 { width:30%; transform: translateX(12%) translateY(21%); }
         #img4_2 { width:75%; transform: translateX(-50%) translateY(-62%); }
-        #img5_1 { width:42%; transform: translateX(-50%) translateY(-113%);
+        #img5_1 { width:42%; transform: translateX(-50%) translateY(-43%);
             content:url('./asset/images/bg/5_1.png');
         }
-        #img5_2 { width:85%; transform: translateX(-50%) translateY(-117%);
+        #img5_2 { width:85%; transform: translateX(-50%) translateY(-47%);
             content:url('./asset/images/bg/5_2.png');
         }
-        #img5_3 { width:70%; transform: translateX(-49%) translateY(17%); 
+        #img5_3 { width:70%; transform: translateX(-49%) translateY(143%); 
             content:url('./asset/images/bg/5_3.png');
         }
-        #img5_4 { width:88%; transform: translateX(-50%) translateY(18%);
+        #img5_4 { width:88%; transform: translateX(-50%) translateY(137%);
             content:url('./asset/images/bg/5_4.png');
         }
         
