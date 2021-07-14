@@ -5,7 +5,7 @@
             navigation:true,
             autoScrolling:true,
             scrollHorizontally: true,
-            touchSensitivity:50,
+            touchSensitivity:25,
             afterLoad: function(origin, destination){
                 const section = destination - 1;
 
@@ -85,7 +85,7 @@
             }
             tw_title.append(tw_title_txt[liIndex][typingIdx]);
             typingIdx++;
-        },180);
+        },150);
     }, base_sec+1000);
 
 
