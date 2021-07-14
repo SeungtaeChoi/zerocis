@@ -5,10 +5,10 @@
             navigation:true,
             autoScrolling:true,
             scrollHorizontally: true,
-
+            scrollingSpeed:1500,
             afterLoad: function(origin, destination){
                 const section = destination - 1;
-                
+
                 //내용 실행
                 pageAniStart(section);
             },
@@ -95,28 +95,47 @@
         const bg_sec = 0;
 
         //배경이미지
-        const page_bg = $('.section').eq(section).find('.bg')
+        const page_bg = $('.section').eq(section).find('.bg');
         if(page_bg === null) { return false; }
         setTimeout(function(){
             if(page_bg.hasClass('s')){ page_bg.removeClass('s'); }
         },0);
+
+        //마스크
+        const mask_darken = $('.section').eq(section).find('.mask.darken');
+        if(mask_darken === null) { return false; }
+        setTimeout(function(){
+            if(mask_darken.hasClass('s')){ mask_darken.removeClass('s'); }
+        },0);
         //글씨
-        const s1 = $('.section').eq(section).find('.s1')
+        const s1 = $('.section').eq(section).find('.s1');
         if(s1){
             setTimeout(function(){
                 if(s1.hasClass('s')){ s1.removeClass('s'); }
             }, bg_sec+1000);
         }
-        const s2 = $('.section').eq(section).find('.s2')
+        const s2 = $('.section').eq(section).find('.s2');
         if(s2){
             setTimeout(function(){
                 if(s2.hasClass('s')){ s2.removeClass('s'); }
             }, bg_sec+2000);
         }
-        const s3 = $('.section').eq(section).find('.s3')
+        const s3 = $('.section').eq(section).find('.s3');
         if(s3){
             setTimeout(function(){
                 if(s3.hasClass('s')){ s3.removeClass('s'); }
             }, bg_sec+3000);
+        }
+        const s4 = $('.section').eq(section).find('.s4');
+        if(s4){
+            setTimeout(function(){
+                if(s4.hasClass('s')){ s4.removeClass('s'); }
+            }, bg_sec+4000);
+        }
+        const s5 = $('.section').eq(section).find('.s5');
+        if(s5){
+            setTimeout(function(){
+                if(s5.hasClass('s')){ s5.removeClass('s'); }
+            }, bg_sec+5000);
         }
     }

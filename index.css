@@ -69,15 +69,18 @@
         transition: 1s;
         z-index: 100;
     }
-    #content_mask > .logo { width:50%; }
+    #content_mask > .logo { width:20%; }
 
     .page { width:100%; height: 100%; position:relative; overflow: hidden; transition: all 1.0s ease-in-out; }
     .page .bg { width:100%; height: 100%; position: absolute; background-size: cover; background-position: center; background-repeat: no-repeat; }
+    #page6 .page .bg { background-position: center 30%; }
 
     .scale_up.bg.s { transform: scale(1); }
     .scale_up.bg { transform: scale(2); transition: all 1.0s ease-in-out; }
     .scale_down.bg.s { transform: scale(2); }
     .scale_down.bg { transform: scale(1); transition: all 1.0s ease-in-out;}
+    .darken.s { opacity:0; }
+    .darken { opacity:0.2; transition: all 1.0s ease-in-out; }
 
     .page .mask { position: absolute; width:100%; height:100%; z-index:2; background:#000; }
     .page .title, .page .desc {  width:100%; z-index:3; }
@@ -88,11 +91,15 @@
     .page .desc .img_wrap { width:100%; height:100%; position: relative; }
     .page .desc .img_wrap img { position:absolute; opacity:1; transition: all 1s; top:50%; left:50%; }
     .page .desc .img_wrap img.s { opacity:0; }
+    .page .desc .img_wrap img#img5_1 { opacity:0.8; }
+    .page .desc .img_wrap img#img5_1.s { opacity:0; }
+    .page .desc .img_wrap img#img5_2 { opacity:0.8; }
+    .page .desc .img_wrap img#img5_2.s { opacity:0; }
 
     /* .page .desc.txt { width:auto; } */
     
     .page .desc .title_a.s { opacity: 0; }
-    .page .desc .title_a { text-align:center; padding:2rem; opacity: 1; transition: all 1s; font-size:3rem; line-height:4.5rem; margin-bottom:2rem; font-weight:bold; }
+    .page .desc .title_a { text-align:center; padding:1.2rem; opacity: 1; transition: all 1s; font-size:3rem; line-height:4.5rem; margin-bottom:2rem; font-weight:bold; }
     .page .desc .desc_a.s { opacity: 0; }
     .page .desc .desc_a { opacity: 1; transition: all 1s; font-size:1.3rem; line-height:2.5rem; }
 
@@ -139,11 +146,17 @@
 
         #img4_1 { width:19%; transform: translateX(-164%) translateY(-38%); }
         #img4_2 { width:39%; transform: translateX(-26%) translateY(-43%); }
-        #img5_1 { width:39%; transform: translateX(-50%) translateY(-37%); 
+        #img5_1 { width:25%; transform: translateX(-50%) translateY(-77%);
             content:url('./asset/images/bg/5_1.png');
         }
-        #img5_2 { width:73%; transform: translateX(-50%) translateY(-40%);
+        #img5_2 { width:51%; transform: translateX(-50%) translateY(-80%);
             content:url('./asset/images/bg/5_2.png');
+        }
+        #img5_3 { width:51%; transform: translateX(-48%) translateY(35%); 
+            content:url('./asset/images/bg/5_3.png');
+        }
+        #img5_4 { width:70%; transform: translateX(-50%) translateY(29%);
+            content:url('./asset/images/bg/5_4.png');
         }
 
         footer { flex-direction: row; padding:3em; }
@@ -168,11 +181,17 @@
 
         #img4_1 { width:22%; transform: translateX(-164%) translateY(-38%); }
         #img4_2 { width:43%; transform: translateX(-26%) translateY(-43%); }
-        #img5_1 { width:70%; transform: translateX(-50%) translateY(-30%);
-            content:url('./asset/images/bg/5_1_m.png');
+        #img5_1 { width:36%; transform: translateX(-50%) translateY(-83%);
+            content:url('./asset/images/bg/5_1.png');
         }
-        #img5_2 { width:75%; transform: translateX(-50%) translateY(-32%);
-            content:url('./asset/images/bg/5_2_m.png');
+        #img5_2 { width:72%; transform: translateX(-50%) translateY(-87%);
+            content:url('./asset/images/bg/5_2.png');
+        }
+        #img5_3 { width:70%; transform: translateX(-49%) translateY(36%); 
+            content:url('./asset/images/bg/5_3.png');
+        }
+        #img5_4 { width:88%; transform: translateX(-50%) translateY(36%);
+            content:url('./asset/images/bg/5_4.png');
         }
 
         footer { flex-direction: column; padding:1em; }
@@ -184,25 +203,31 @@
         #navbar { right: -1.0rem; }
 
         #main .tw-title { font-size:2.5rem; }
-        .page .title { padding:0 0.3em; font-size:2.5rem; }
+        .page .title { padding:0 0.3em; font-size:2.3rem; }
         .page .desc { font-weight:bold; }
         .page .desc.txt { width: 100%; transform: translateX(-50%) translateY(-50%); }
         .page .desc .title_a { text-align:center; font-size: 2.5rem; }
         .page .desc .desc_a { text-align:center; padding:0 3rem; font-size:1.8rem; font-weight: normal; line-height:2.7rem; }
 
-        #page2 .bg { background-image:url('./asset/images/bg/2.jpg'); }
-        #page3 .bg { background-image:url('./asset/images/bg/3.jpg'); }
-        #page6 .bg { background-image:url('./asset/images/bg/6.jpg'); }
-        #page7 .bg { background-image:url('./asset/images/bg/7.jpg'); }
-        #page8 .bg { background-image:url('./asset/images/bg/8.jpg'); }
+        #page2 .bg { background-image:url('./asset/images/bg/2_m.jpeg'); }
+        #page3 .bg { background-image:url('./asset/images/bg/3_m.jpeg'); }
+        #page6 .bg { background-image:url('./asset/images/bg/6_m.jpeg'); }
+        #page7 .bg { background-image:url('./asset/images/bg/7_m.jpeg'); }
+        #page8 .bg { background-image:url('./asset/images/bg/8_m.jpeg'); }
 
         #img4_1 { width:30%; transform: translateX(12%) translateY(21%); }
         #img4_2 { width:75%; transform: translateX(-50%) translateY(-62%); }
-        #img5_1 { width:83%; transform: translateX(-50%) translateY(-37%);
-            content:url('./asset/images/bg/5_1_m.png');
+        #img5_1 { width:42%; transform: translateX(-50%) translateY(-113%);
+            content:url('./asset/images/bg/5_1.png');
         }
-        #img5_2 { width:91%; transform: translateX(-50%) translateY(-39%);
-            content:url('./asset/images/bg/5_2_m.png');
+        #img5_2 { width:85%; transform: translateX(-50%) translateY(-117%);
+            content:url('./asset/images/bg/5_2.png');
+        }
+        #img5_3 { width:70%; transform: translateX(-49%) translateY(17%); 
+            content:url('./asset/images/bg/5_3.png');
+        }
+        #img5_4 { width:88%; transform: translateX(-50%) translateY(18%);
+            content:url('./asset/images/bg/5_4.png');
         }
         
         footer { flex-direction: column; padding:1em; }
