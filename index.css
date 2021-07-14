@@ -123,6 +123,7 @@
     and (min-width : 769px) {
         #navbar { right: 1.0rem; font-size:0.8rem; }
 
+        .page .title { font-size:2.5rem; }
         /* .page .desc.txt { transform: translateX(-70%) translateY(-50%); } */
         .page .desc.txt .desc_a { width:75%; }
 
@@ -153,6 +154,7 @@
     and (min-width : 481px) and (max-width : 768px) {
         #navbar { right: 1.0rem; }
         
+        .page .title { font-size:2.5rem; }
         .page .desc.txt { transform: translateX(-50%) translateY(-50%); }
 
         .page .desc .title_a { text-align:center; }
