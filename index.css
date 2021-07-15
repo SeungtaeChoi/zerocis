@@ -105,11 +105,14 @@
 
     #main .hu_txt { display:none; }
     #main .tw-title.s { font-size:0rem; }
-    #main .tw-title { white-space:nowrap;  }
+    #main .tw-title { white-space:nowrap; }
     #main .tw-title,
     .page .title { font-size:3rem; font-weight:bold; word-break: keep-all; }
     #main .tw-title::after { content: "|"; transition: all 0.1s; animation: blink 0.5s linear infinite alternate; }
     @keyframes blink { 0%{ opacity:0 } 100%{ opacity:1 } }
+
+    #page3 .page .desc .title_a,
+    #page6 .page .title { font-size:4rem; }
 
     #page4 .page .title { line-height:4rem;  word-break: keep-all; }
     #page5 .page .title { line-height:4rem; padding-top: 0.5rem; word-break: keep-all; }
@@ -133,7 +136,7 @@
         .page .title { font-size:2.5rem; }
         /* .page .desc.txt { transform: translateX(-70%) translateY(-50%); } */
         .page .desc.txt .desc_a { width:75%; }
-
+        #page2 .page .title { position: absolute; top: 50%; margin: 0; transform: translateY(-50%); }
         #page2 .bg { background-image:url('./asset/images/bg/2.jpg'); }
         #page3 .bg { background-image:url('./asset/images/bg/3.jpg'); }
         /* #page3 .desc { transform: translateX(-70%) translateY(-90%); } */
