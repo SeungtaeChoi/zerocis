@@ -216,6 +216,7 @@
         .page .desc .title_a { text-align:center; font-size: 2.5rem; }
         .page .desc .desc_a { text-align:center; padding:0 3rem; font-size:1.8rem; font-weight: normal; line-height:2.7rem; }
         #page5 .page .title { padding-top:5rem; }
+        #page6 .page .title { margin-top:0.1em; }
 
         #page2 .bg { background-image:url('./asset/images/bg/2_m.jpeg'); }
         #page3 .bg { background-image:url('./asset/images/bg/3_m.jpeg'); }
